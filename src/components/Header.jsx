@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <header className="main-head flex items-center justify-between border-2 max-w-[90%] mx-auto p-1 text-lg">
+    <header className="main-head flex items-center justify-between border-2 max-w-[90%] mx-auto mt-1 p-1 text-lg">
 
       {/*             ********* 1-log section ******* */}
 
