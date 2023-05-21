@@ -4,6 +4,6 @@
 
 @layer components {
   .general-layout {
-    @apply mx-auto my-3 max-w-[95%]
+    @apply mx-auto my-3 max-w-[97%] px-[20px]
   }
 }

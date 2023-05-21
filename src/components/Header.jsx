@@ -2,7 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <header className="main-head flex items-center justify-between border-2 general-layout text-lg">
+    // ******** size for main-head can be 60-80  *******
+    <header className="main-head flex items-center justify-between general-layout text-lg h-[60px] bg-gray-100">
 
       {/*             ********* 1-log section ******* */}
 
