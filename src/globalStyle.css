@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .general-layout {
+    @apply mx-auto my-3 max-w-[95%]
+  }
+}
