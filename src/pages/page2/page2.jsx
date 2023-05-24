@@ -9,7 +9,9 @@ export default function TextArea() {
     <section className="general-layout flex flex-col justify-start items-center bg-gray-100 pt-[1.2rem] w-full h-[80vh]">
 
       {/* <Screen /> */}
-      <h1 className="self-start ml-[2.5%]">See example codes here:</h1>
+      <h1 className="self-start ml-[2.5%]">
+        Read and Write codes here:
+      </h1>
       <CodeEditor />
       <FooterPageTwo />
     </section>
