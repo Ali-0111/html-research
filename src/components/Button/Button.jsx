@@ -7,9 +7,8 @@ export default function Button({ content }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleClick = (code) => {
-    console.log(code, 'from click');
     dispatch(updateStateCode(code));
-    navigate('/page-2');
+    navigate('/code');
   };
 
   return (
