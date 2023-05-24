@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    font-size: x-large;
+  }
+}
+
 @layer components {
   .general-layout {
     @apply mx-auto my-3 max-w-[97%] px-[20px]
   }
+}
+
+#codeScreen {
+  resize: none;
+}
+
+.editor-container {
+  @apply border-2 rounded w-[95%] px-3 my-3 h-[80%]
 }
