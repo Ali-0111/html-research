@@ -7,7 +7,7 @@ import 'prismjs/themes/prism.css';
 
 export default function CodeEditor() {
   const [code, setCode] = React.useState(
-    '<h2>Codes will be here</h2>',
+    '<h2>Demo</h2>',
   );
   return (
     <div className="editor-container">
