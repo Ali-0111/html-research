@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function Button({ code }) {
+export default function Button({ content }) {
   const handleClick = (code) => {
     console.log(code);
   };
@@ -9,7 +9,7 @@ export default function Button({ code }) {
     <button
       type="button"
       className="border"
-      onClick={() => handleClick(code)}
+      onClick={() => handleClick(content)}
     >
       Live Demo
     </button>
@@ -17,5 +17,5 @@ export default function Button({ code }) {
 }
 
 Button.propTypes = {
-  code: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };

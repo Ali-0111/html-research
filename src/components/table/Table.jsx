@@ -5,7 +5,11 @@ export default function Table() {
   return (
     <table className="w-full mt-3 py-2 bg-slate-50 border-red-300">
 
-      <TableHead columns={['TagName', 'Attributes', 'Description']} />
+      <TableHead
+        columns={
+          ['TagName', 'Attributes', 'Description', 'Usage']
+        }
+      />
       <TableBody />
     </table>
   );

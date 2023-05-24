@@ -22,10 +22,8 @@ function TableCells({ data }) {
 const dataShape = {
   tagName: PropTypes.string.isRequired,
   attributes: PropTypes.string.isRequired,
-  Usage: PropTypes.shape({
-    info: PropTypes.string.isRequired,
-    code: PropTypes.string.isRequired,
-  }).isRequired,
+  info: PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
 };
 
 TableCells.propTypes = {

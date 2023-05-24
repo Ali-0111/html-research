@@ -7,7 +7,6 @@ export default function Home() {
 
       <SearchBar />
       <Table />
-      <p>Hi, from home page</p>
     </section>
   );
 }
