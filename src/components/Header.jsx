@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/images/logo.png';
 
 export default function Header() {
   return (
@@ -8,7 +9,9 @@ export default function Header() {
       {/*             ********* 1-log section ******* */}
 
       <div className="logo w-[50%]">
-        <NavLink to="/">logo/pic is here</NavLink>
+        <NavLink to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </NavLink>
       </div>
 
       {/*             ********* 2-links section ******* */}

@@ -21,3 +21,11 @@
 .editor-container {
   @apply border-2 rounded w-[95%] px-3 my-3 h-[80%]
 }
+
+.logo {
+  @apply w-[50px]
+}
+
+/* .searchIcon {
+  @apply inli
+} */

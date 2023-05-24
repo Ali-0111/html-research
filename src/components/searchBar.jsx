@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import searchIcon from '../assets/images/searchIcon.svg';
 
 export default function SearchBar() {
   const [formData, setFormData] = useState({
@@ -16,9 +17,9 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-[40%] mx-auto p-2 border-2 rounded-full flex items-center justify-between bg-white">
+    <form onSubmit={handleSubmit} className="w-[40%] mx-auto pl-2 border-2 py-[3px] rounded-full flex items-center justify-between bg-white">
       <input
-        className="w-[90%] py-[2px] indent-1 outline-none"
+        className="w-[90%] indent-1 outline-none"
         type="text"
         placeholder="Search..."
         required
@@ -27,10 +28,10 @@ export default function SearchBar() {
         onChange={handleInputChange}
       />
       <button
-        className="w-[10%] py-[2px] text-right"
+        className="w-[10%] flex justify-end"
         type="submit"
       >
-        Ok
+        <img src={searchIcon} alt="logo" />
       </button>
     </form>
   );
