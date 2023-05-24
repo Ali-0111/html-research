@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home/Home';
+import Page2 from './pages/page2/page2';
 
 function App() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/page-2" element={<h3>Page-2</h3>} />
+          <Route path="/page-2" element={<Page2 />} />
         </Routes>
       </main>
     </>
