@@ -18,7 +18,7 @@ export default function Header() {
 
       <nav className="w-[50%]">
         <ul className="flex items-center justify-evenly">
-          <li><NavLink exact to="/">Home</NavLink></li>
+          <li><NavLink exact="true" to="/">Home</NavLink></li>
           <li><NavLink to="/code">Code</NavLink></li>
         </ul>
       </nav>
