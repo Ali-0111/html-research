@@ -26,6 +26,9 @@
   @apply w-[50px]
 }
 
+.active {
+  @apply underline underline-offset-8
+}
 /* .searchIcon {
   @apply inli
 } */
