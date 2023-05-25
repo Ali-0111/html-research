@@ -11,12 +11,12 @@ function TableCells({ data }) {
             key={`td${index + 1}`}
             className="
             text-center border
-            [&:nth-child(2)]:w-[10%]
+            p-2
             [&:nth-child(2)]:break-all
             [&:nth-child(3)]:text-justify
-            last:sm:w-[10%]
-            last:max-sm:w-[20%]
-            last:max-[480px]:w-[25%]
+            last:md:w-[10%]
+            last:sm:w-[20%]
+            last:max-sm:w-[25%]
             "
           >
             {cellContent(key, data[key])}
