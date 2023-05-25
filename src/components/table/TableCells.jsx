@@ -10,12 +10,13 @@ function TableCells({ data }) {
           <td
             key={`td${index + 1}`}
             className="
-              first:w-[10%] last:w-[20%]
-              [&:nth-child(2)]:w-[20%]
-              [&:nth-child(2)]:break-all
-              [&:nth-child(3)]:w-[50%]
-              [&:nth-child(3)]:text-justify
-              text-center py-[5px] border
+            text-center py-[5px] border
+            [&:nth-child(2)]:w-[20%]
+            [&:nth-child(2)]:break-all
+            [&:nth-child(3)]:text-justify
+            last:sm:w-[15%]
+            last:max-sm:w-[20%]
+            last:max-[480px]:w-[25%]
             "
           >
             {cellContent(key, data[key])}
