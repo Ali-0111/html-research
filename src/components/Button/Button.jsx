@@ -1,27 +1,57 @@
-import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { updateStateCode } from '../../Redux/codeSlice';
 
-export default function Button({ content }) {
+const buttonSetup = {
+  demo: {
+    label: 'Test',
+    action: (dispatch, navigate, code) => {
+      dispatch(updateStateCode(code));
+      navigate('/code');
+    },
+  },
+  copy: {
+    label: 'Get Codes',
+    action: () => {
+      console.log('I copied code');
+    },
+  },
+  next: {
+    label: 'Online Compiler >>',
+    action: () => {
+      console.log('I open compiler');
+    },
+  },
+};
+
+export default function Button({ name, code }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleClick = (code) => {
-    dispatch(updateStateCode(code));
-    navigate('/code');
+
+  const buttonSelected = buttonSetup[name];
+  const { action } = buttonSelected;
+
+  const handleClick = () => {
+    action(dispatch, navigate, code);
   };
 
   return (
     <button
       type="button"
-      className="border"
-      onClick={() => handleClick(content)}
+      className="border py-[0.5px] px-4"
+      onClick={handleClick}
     >
-      Live Demo
+      {buttonSelected.label}
     </button>
   );
 }
 
+Button.defaultProps = {
+  code: '',
+};
+
 Button.propTypes = {
-  content: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  code: PropTypes.string,
 };
