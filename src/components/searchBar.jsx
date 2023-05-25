@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import SearchField from './Input/inputField';
+import SubmitButton from './Button/SubmitButton';
 import searchIcon from '../assets/images/searchIcon.svg';
 
 export default function SearchBar() {
@@ -8,7 +10,7 @@ export default function SearchBar() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData.searchText);
+    console.log(formData);
   }
 
   const handleInputChange = (event) => {
@@ -17,22 +19,20 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-[40%] mx-auto pl-2 border-2 py-[3px] rounded-full flex items-center justify-between bg-white">
-      <input
-        className="w-[90%] indent-1 outline-none"
-        type="text"
-        placeholder="Search..."
-        required
-        name="searchText"
+    <form
+      onSubmit={handleSubmit}
+      className="
+      rounded-full
+      flex items-center justify-between bg-white
+      w-[40%] mx-auto pl-2 border-2 py-[3px]
+      "
+    >
+      <SearchField
         value={formData.searchText}
-        onChange={handleInputChange}
+        func={handleInputChange}
       />
-      <button
-        className="w-[10%] flex justify-end"
-        type="submit"
-      >
-        <img src={searchIcon} alt="logo" />
-      </button>
+
+      <SubmitButton picture={searchIcon} alt="submitPict" />
     </form>
   );
 }
