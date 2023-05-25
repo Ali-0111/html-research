@@ -10,11 +10,11 @@ function TableCells({ data }) {
           <td
             key={`td${index + 1}`}
             className="
-            text-center py-[5px] border
-            [&:nth-child(2)]:w-[20%]
+            text-center border
+            [&:nth-child(2)]:w-[10%]
             [&:nth-child(2)]:break-all
             [&:nth-child(3)]:text-justify
-            last:sm:w-[15%]
+            last:sm:w-[10%]
             last:max-sm:w-[20%]
             last:max-[480px]:w-[25%]
             "

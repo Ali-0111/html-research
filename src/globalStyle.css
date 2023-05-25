@@ -23,7 +23,7 @@
 }
 
 .logo {
-  @apply w-[50px]
+  @apply w-[40px]
 }
 
 .active {

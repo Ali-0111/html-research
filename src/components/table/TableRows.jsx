@@ -8,7 +8,7 @@ export default function TableRows() {
         dataSet.map((tagDetails, index) => (
           <tr
             key={`row${index + 1}`}
-            className="row w-full"
+            className="row"
           >
             <TableCells data={tagDetails} />
           </tr>
