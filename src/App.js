@@ -20,7 +20,7 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/code" element={<Code />} />
         </Routes>
       </main>

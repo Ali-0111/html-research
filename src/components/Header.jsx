@@ -6,7 +6,7 @@ export default function Header() {
     // ******** size for main-head can be 60-80  *******
     <header className="main-head flex items-center justify-between general-layout text-lg h-[60px] bg-gray-100">
 
-      {/*             ********* 1-log section ******* */}
+      {/* ********* 1:-log section ******* */}
 
       <div className="logo w-[50%]">
         <NavLink to="/">
@@ -14,11 +14,11 @@ export default function Header() {
         </NavLink>
       </div>
 
-      {/*             ********* 2-links section ******* */}
+      {/* ********* 2:-links section ******* */}
 
       <nav className="w-[50%]">
         <ul className="flex items-center justify-evenly">
-          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink exact to="/">Home</NavLink></li>
           <li><NavLink to="/code">Code</NavLink></li>
         </ul>
       </nav>
