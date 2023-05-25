@@ -9,7 +9,14 @@ function TableCells({ data }) {
         keys.map((key, index) => (
           <td
             key={`td${index + 1}`}
-            className="text-center border"
+            className="
+              first:w-[10%] last:w-[20%]
+              [&:nth-child(2)]:w-[20%]
+              [&:nth-child(2)]:break-all
+              [&:nth-child(3)]:w-[50%]
+              [&:nth-child(3)]:text-justify
+              text-center py-[5px] border
+            "
           >
             {cellContent(key, data[key])}
           </td>
