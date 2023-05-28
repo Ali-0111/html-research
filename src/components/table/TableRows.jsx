@@ -1,11 +1,14 @@
-import dataSet from '../../util/dataSet';
+import { useSelector } from 'react-redux';
 import TableCells from './TableCells';
 
 export default function TableRows() {
+  const { dataSet, filteredBySearch } = useSelector((store) => (store));
+
+  const data = filteredBySearch[0] ? filteredBySearch : dataSet;
   return (
     <>
       {
-        dataSet.map((tagDetails, index) => (
+        data.map((tagDetails, index) => (
           <tr
             key={`row${index + 1}`}
             className="row"

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 export default function SearchField({ value, func }) {
   return (
     <input
-      className="w-[90%] indent-1 outline-none"
+      className="searchBar-input w-[90%] indent-1 outline-none"
       type="text"
+      autoComplete="off"
       placeholder="Search..."
       required
       name="searchText"
