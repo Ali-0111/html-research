@@ -1,16 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import CodeEditor from '../../editor/CodeEditor';
-import FooterPageTwo from '../../components/FooterPageTwo';
+import CodeRunner from '../../editor/CodeRunner';
+// import FooterPageTwo from '../../components/FooterPageTwo';
 
 export default function Code() {
+  const { code } = useSelector((state) => (state));
   return (
-    <section className="general-layout flex flex-col justify-center items-center bg-gray-100 pt-[1.2rem] w-full h-[80vh]">
-
-      <h1 className="self-start ml-[2.5%]">
-        Read and Write codes here:
-      </h1>
-      <CodeEditor />
-      <FooterPageTwo />
+    <section className="general-layout flex justify-between items-center bg-gray-100 pt-[1.2rem] w-full h-[80vh]">
+      <CodeEditor code={code} />
+      <CodeRunner code={code} />
+      {/* <FooterPageTwo /> */}
     </section>
   );
 }

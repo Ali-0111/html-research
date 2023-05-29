@@ -11,6 +11,12 @@ const buttonSetup = {
       navigate('/code');
     },
   },
+  backHome: {
+    label: 'Back',
+    action: (_, navigate) => {
+      navigate('/');
+    },
+  },
   copy: {
     label: 'Get Codes',
     action: () => {
@@ -39,7 +45,7 @@ export default function Button({ name, code }) {
   return (
     <button
       type="button"
-      className="border py-[0.5px] px-4"
+      className="border border-slate-300 py-[0.5px] px-4 hover:bg-slate-600/40 hover:scale-[1.1] hover:text-white"
       onClick={handleClick}
     >
       {buttonSelected.label}
